@@ -4,12 +4,12 @@ function newForEach(array, callback) {
   }
 }
 
-const newFill = (array, value, start = 0, end = array.length - 1) => {
+function newFill(array, value, start = 0, end = array.length - 1) {
   for (let i = start; i < end; i++) {
     array[i] = value;
   }
   return array;
-};
+}
 
 function newMap(array, callback) {
   let result = [];
@@ -29,7 +29,7 @@ function newSome(array, callback) {
   return false;
 }
 
-function newFild(array, callback) {
+function newFind(array, callback) {
   for (let i = 0; i < array.length; i++) {
     if (callback(array[i])) {
       return array[i];
@@ -37,7 +37,7 @@ function newFild(array, callback) {
   }
 }
 
-function newFildIndex(array, callback) {
+function newFindIndex(array, callback) {
   let result;
   for (let i = 0; i < array.length; i++) {
     if (callback(array[i], i)) {
