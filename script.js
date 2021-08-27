@@ -48,17 +48,13 @@ function newFindIndex(array, callback) {
 }
 
 function newEvery(array, callback) {
-  let result;
+  let result = [];
   for (let i = 0; i < array.length; i++) {
     if (callback(array[i])) {
-      result++;
+      result.push(true);
     }
   }
-  if (result === array.length) {
-    return true;
-  } else {
-    return false;
-  }
+  return result.length === array.length;
 }
 
 function newFilter(array, callback) {
